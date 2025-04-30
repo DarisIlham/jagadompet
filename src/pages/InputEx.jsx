@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import back from '../images/backw.png';
 import downgray from '../images/greyarrow.png';
 import calendar from '../images/calender.png';
-import salary from '../images/category.png';
-import pocket from '../images/category2.png';
+import shopping from '../images/shopcat.png';
+import food from '../images/foodcat.png';
+import bills from '../images/billscat.png';
+import transport from '../images/transportcat.png';
+import game from '../images/entcat.png';
 import other from '../images/category3.png';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'; // Untuk styling kalender
@@ -71,13 +74,13 @@ const TransactionDetailPage = () => {
 
 
   return (
-    <div className="w-full min-h-screen bg-[#00C153] flex flex-col relative overflow-hidden">
+    <div className="w-full min-h-screen bg-[#FA2F34] flex flex-col relative overflow-hidden">
       {/* Header */}
       <div className="w-full h-[64px] mt-[44px] flex items-center justify-center relative">
         <button className="absolute left-[20px]">
           <img src={back} alt="Back" className="w-[24px] h-[24px]" />
         </button>
-        <p className="font-semibold text-[18px] text-white">Income</p>
+        <p className="font-semibold text-[18px] text-white">Expense</p>
       </div>
 
       {/* Amount Input */}
@@ -156,7 +159,7 @@ const TransactionDetailPage = () => {
         <div className={`w-full px-[16px] flex ${isKeyboardOpen ? 'mt-[-73px]' : 'mt-[160px]'}`}>
           <button
             className={`flex-1 h-[56px] rounded-[16px] text-white font-semibold text-[18px] ${
-              isButtonEnabled ? 'bg-[#00C153]' : 'bg-[#AAAAAA]'
+              isButtonEnabled ? 'bg-[#FA2F34]' : 'bg-[#AAAAAA]'
             }`}
             disabled={!isButtonEnabled}
           >
@@ -174,19 +177,34 @@ const TransactionDetailPage = () => {
 
             {/* List Category */}
             <div className="flex flex-col  px-4">
-              <div onClick={() => handleCategorySelect('Salary', salary, 'bg-[#CFFAEA]' )} className="flex w-[343px] pl-[8px] h-[74px] border-[1px] text-[#91919F]  border-[#F1F1FA] rounded-[16px] items-center">
-                <img src={salary} />
-                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Salary</span>
+              <div onClick={() => handleCategorySelect('Shopping', shopping, 'bg-[#FCEED4]' )} className="flex w-[343px] pl-[8px] h-[74px] border-[1px] text-[#91919F]  border-[#F1F1FA] rounded-[16px] items-center">
+                <img src={shopping} />
+                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Shopping</span>
               </div>
 
-              <div onClick={() => handleCategorySelect('Pocket Money', pocket, 'bg-[#FFF8D8]' )} className="flex w-[343px] pl-[8px] h-[74px] border-[1px] text-[#91919F] border-[#F1F1FA] rounded-[16px]  mt-[16px] items-center">
-                <img src={pocket} />
-                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Pocket Money</span>
+              <div onClick={() => handleCategorySelect('Food & Beverages', food, 'bg-[#FDD5D7]' )} className="flex w-[343px] pl-[8px] h-[74px] border-[1px] text-[#91919F] border-[#F1F1FA] rounded-[16px]  mt-[16px] items-center">
+                <img src={food} />
+                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Food & Beverages</span>
+              </div>
+
+              <div onClick={() => handleCategorySelect('Bills & Subscription', bills, 'bg-[#EEE5FF]' )} className="flex w-[343px] pl-[8px] h-[74px] border-[1px] text-[#91919F] border-[#F1F1FA] rounded-[16px]  mt-[16px] items-center">
+                <img src={bills} />
+                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Bills & Subscription</span>
+              </div>
+
+              <div onClick={() => handleCategorySelect('Transportation', transport, 'bg-[#D9EBFF]' )} className="flex w-[343px] pl-[8px] h-[74px] border-[1px] text-[#91919F] border-[#F1F1FA] rounded-[16px]  mt-[16px] items-center">
+                <img src={transport} />
+                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Transportation</span>
+              </div>
+
+              <div onClick={() => handleCategorySelect('Entertainment', game, 'bg-[#FFE0CB]' )} className="flex w-[343px] pl-[8px] h-[74px] border-[1px] text-[#91919F] border-[#F1F1FA] rounded-[16px]  mt-[16px] items-center">
+                <img src={game} />
+                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Entertainment</span>
               </div>
 
               <div onClick={() => handleCategorySelect('Lainnya', other, 'bg-[#E8E8E8]')} className="flex w-[343px] pl-[8px] h-[74px] border-[1px] text-[#91919F] border-[#F1F1FA] rounded-[16px] mt-[16px]  items-center">
                 <img src={other} />
-                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Lainnya</span>
+                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Other</span>
               </div>
             </div>
           </div>

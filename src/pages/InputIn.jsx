@@ -186,7 +186,7 @@ const TransactionDetailPage = () => {
 
               <div onClick={() => handleCategorySelect('Lainnya', other, 'bg-[#E8E8E8]')} className="flex w-[343px] pl-[8px] h-[74px] border-[1px] text-[#91919F] border-[#F1F1FA] rounded-[16px] mt-[16px]  items-center">
                 <img src={other} />
-                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Lainnya</span>
+                <span className="text-[#292B2D] text-[16px] font-medium flex ml-[15px]">Other</span>
               </div>
             </div>
           </div>
